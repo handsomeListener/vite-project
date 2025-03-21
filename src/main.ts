@@ -4,7 +4,8 @@ import 'virtual:svg-icons-register'
 import { createApp } from 'vue'
 import App from './App.vue'
 import components from '@/components/Global/index.ts'
+import router from '@/router/router.ts'
 
 const app = createApp(App)
 
-app.use(components).mount('#app')
+app.use(components).use(router).mount('#app')

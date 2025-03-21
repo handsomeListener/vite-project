@@ -4,8 +4,8 @@ import * as process from 'node:process';
 import path from 'path';
 import { viteMockServe } from 'vite-plugin-mock';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import Pages from 'vite-plugin-pages';
 
 export default defineConfig(({ command, mode }) => {
 	const env = loadEnv(mode, process.cwd());
@@ -20,6 +20,7 @@ export default defineConfig(({ command, mode }) => {
 		plugins: [
 			vue(),
 			vueJsx(),
+			Pages(),
 			viteMockServe(
 				{
 					mockPath: 'mock', // mock文件夹路径
