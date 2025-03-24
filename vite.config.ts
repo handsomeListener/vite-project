@@ -1,4 +1,5 @@
-import { defineConfig, loadEnv } from 'vite';
+// import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import * as process from 'node:process';
 import path from 'path';
@@ -7,8 +8,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import Pages from 'vite-plugin-pages';
 
-export default defineConfig(({ command, mode }) => {
-	const env = loadEnv(mode, process.cwd());
+export default defineConfig(({ command }) => {
+	// const env = loadEnv(mode, process.cwd());
 	return {
 		css: {
 			preprocessorOptions: {
@@ -46,7 +47,8 @@ export default defineConfig(({ command, mode }) => {
 			alias: {
 				'@': path.resolve(__dirname, './src')
 			}
-		}
+		},
+		tsConfigPath: './tsconfig.node.json',
 		// server: {
 		// 	port: "8088",
 		// 	proxy: {

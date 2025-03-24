@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@antv/g6": "^5.0.44",
+    "@antv/x6": "^2.18.1",
     "animate.css": "^4.1.1",
     "axios": "^1.7.7",
     "echarts": "^5.5.1",
@@ -17,16 +19,22 @@
     "echarts-liquidfill": "^3.1.0",
     "element-plus": "^2.8.5",
     "lodash": "^4.17.21",
+    "mathjs": "^14.3.1",
     "mitt": "^3.0.1",
     "moment": "^2.30.1",
     "node-sass": "^9.0.0",
     "pinia": "^2.2.4",
     "pinia-plugin-persist": "^1.0.0",
+    "rough-notation": "^0.5.1",
     "vue": "^3.5.10",
+    "vue-json-pretty": "^2.4.0",
     "vue-router": "^4.5.0",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "vxe-pc-ui": "^4.4.21",
+    "vxe-table": "^4.11.28"
   },
   "devDependencies": {
+    "@types/node": "^22.13.10",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vitejs/plugin-vue-jsx": "^4.1.2",
     "mockjs": "^1.1.0",

@@ -1,21 +1,19 @@
 <template>
 	<div class="App">
-		<svg-icon name="dog" />
+		<router-view v-slot="{ Component }">
+			<component :is="Component" />
+		</router-view>
 	</div>
 </template>
 <script lang="tsx">
 import { defineComponent } from 'vue';
 import { getUserInfo } from '@/api/user.ts';
-import SvgIcon from '@/components/Global/SvgIcon.vue';
 
 export default defineComponent({
 	name: 'App',
-	components: { SvgIcon },
 	setup() {
 		getUserInfo().then(res => {
-			if (res.code === 200) {
-				console.log(res.data);
-			}
+			if(res.code === 200) {}
 		});
 	}
 });
