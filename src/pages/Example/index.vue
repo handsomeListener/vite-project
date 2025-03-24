@@ -44,15 +44,22 @@
 			<div class="example-item-title">AnimateCss</div>
 			<div class=example-item-content><span :class="['animate', { 'animate__hinge': flag }]" @mouseenter="flag = true" @mouseleave="flag = false">鼠标放上来</span></div>
 		</div>
+		<div class="example-item">
+			<div class="example-item-title">RoughNotation</div>
+			<div class="example-item-content">
+				<span id="box">Rough Notation </span>是一个 JavaScript 库，用于在网页上创建和动画化多彩的注释。它使用 <span id="circle">RoughJS</span> 创建手绘风格的外观。你可以创建多种注释样式，包括下 <span id="underline">划线、方框、圆圈、高亮、删除线</span> 等，并控制每种注释样式的持续时间和颜色。
+			</div>
+		</div>
 	</div>
 </template>
 <script lang="ts">
-import { defineComponent, ref, computed } from 'vue';
+import { defineComponent, ref, computed, onMounted } from 'vue';
 import { getUserInfo } from '@/api/user.ts';
 import userStore from '@/store/user.ts';
 import SvgIcon from '@/components/Global/SvgIcon.vue';
 import moment from 'moment';
 import { difference } from 'lodash';
+import { annotate, annotationGroup } from 'rough-notation';
 
 export default defineComponent({
 	name: 'index',
@@ -77,6 +84,14 @@ export default defineComponent({
 		const array2 = [2, 3, 4]
 		const array = difference(array1, array2);
 		const flag = ref(false);
+		onMounted(() => {
+			const a1 = annotate(document.getElementById('underline'), { type: 'underline', color: 'red' });
+			const a2 = annotate(document.getElementById('box'), { type: 'box', color: 'blue' });
+			const a3 = annotate(document.getElementById('circle'), { type: 'circle', color: 'green' });
+
+			const ag = annotationGroup([a3, a1, a2]);
+			ag.show();
+		})
 		return {
 			keyword,
 			userInfo,
