@@ -40,6 +40,10 @@
 			<div class="example-item-title">LodashJs</div>
 			<div class=example-item-content>数组1：{{ array1 }}，数组2:{{ array2 }}，数组1的值不在数组2的有：{{ array }}</div>
 		</div>
+		<div class="example-item">
+			<div class="example-item-title">AnimateCss</div>
+			<div class=example-item-content><span :class="['animate', { 'animate__hinge': flag }]" @mouseenter="flag = true" @mouseleave="flag = false">鼠标放上来</span></div>
+		</div>
 	</div>
 </template>
 <script lang="ts">
@@ -72,6 +76,7 @@ export default defineComponent({
 		const array1 = [1, 3, 5]
 		const array2 = [2, 3, 4]
 		const array = difference(array1, array2);
+		const flag = ref(false);
 		return {
 			keyword,
 			userInfo,
@@ -79,7 +84,8 @@ export default defineComponent({
 			time,
 			array,
 			array1,
-			array2
+			array2,
+			flag,
 		}
 	}
 });
@@ -94,6 +100,15 @@ export default defineComponent({
 		.example-item-title {
 			font-weight: bold;
 			padding-bottom: 5px;
+		}
+		.example-item-content {
+			.animate {
+				display: inline-block;
+				cursor: pointer;
+				color: skyblue;
+				text-decoration: underline;
+				padding-left: 20px;
+			}
 		}
 	}
 }
