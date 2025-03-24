@@ -45,7 +45,7 @@ export default defineConfig(({ command }) => {
 		},
 		resolve: {
 			alias: {
-				'@': path.resolve(__dirname, './src')
+				'@': path.resolve(__dirname, './src'),
 			}
 		},
 		tsConfigPath: './tsconfig.node.json',
