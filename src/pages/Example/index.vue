@@ -24,15 +24,25 @@
 				用户名：{{ user.userInfo.username }}，密码：{{ user.userInfo.password }}
 			</div>
 		</div>
+		<div class="example-item">
+			<div class="example-item-title">
+				SvgIcon:
+			</div>
+			<div class="example-item-content">
+				<svg-icon name="dog" />
+			</div>
+		</div>
 	</div>
 </template>
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue';
 import { getUserInfo } from '@/api/user.ts';
 import userStore from '@/store/user.ts';
+import SvgIcon from '@/components/Global/SvgIcon.vue';
 
 export default defineComponent({
 	name: 'index',
+	components: { SvgIcon },
 	setup() {
 		const keyword = ref('');
 		const userInfo = ref({

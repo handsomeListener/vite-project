@@ -9,7 +9,7 @@ declare module 'axios' {
 	interface AxiosResponse<T = any, D = any> extends Response<T> {}
 }
 
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 
 //创建axios实例
 const http = axios.create({
