@@ -36,6 +36,10 @@
 			<div class="example-item-title">MomentJs</div>
 			<div class=example-item-content>时间：{{ time }}</div>
 		</div>
+		<div class="example-item">
+			<div class="example-item-title">LodashJs</div>
+			<div class=example-item-content>数组1：{{ array1 }}，数组2:{{ array2 }}，数组1的值不在数组2的有：{{ array }}</div>
+		</div>
 	</div>
 </template>
 <script lang="ts">
@@ -44,6 +48,7 @@ import { getUserInfo } from '@/api/user.ts';
 import userStore from '@/store/user.ts';
 import SvgIcon from '@/components/Global/SvgIcon.vue';
 import moment from 'moment';
+import { difference } from 'lodash';
 
 export default defineComponent({
 	name: 'index',
@@ -64,12 +69,17 @@ export default defineComponent({
 			}
 		});
 		const time = moment().format('YYYY-MM-DD');
-		console.log(time);
+		const array1 = [1, 3, 5]
+		const array2 = [2, 3, 4]
+		const array = difference(array1, array2);
 		return {
 			keyword,
 			userInfo,
 			user,
 			time,
+			array,
+			array1,
+			array2
 		}
 	}
 });
