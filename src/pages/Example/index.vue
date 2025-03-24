@@ -32,6 +32,10 @@
 				<svg-icon name="dog" />
 			</div>
 		</div>
+		<div class="example-item">
+			<div class="example-item-title">MomentJs</div>
+			<div class=example-item-content>时间：{{ time }}</div>
+		</div>
 	</div>
 </template>
 <script lang="ts">
@@ -39,6 +43,7 @@ import { defineComponent, ref, computed } from 'vue';
 import { getUserInfo } from '@/api/user.ts';
 import userStore from '@/store/user.ts';
 import SvgIcon from '@/components/Global/SvgIcon.vue';
+import moment from 'moment';
 
 export default defineComponent({
 	name: 'index',
@@ -58,10 +63,13 @@ export default defineComponent({
 				user.updateUserInfo(data)
 			}
 		});
+		const time = moment().format('YYYY-MM-DD');
+		console.log(time);
 		return {
 			keyword,
 			userInfo,
-			user
+			user,
+			time,
 		}
 	}
 });
