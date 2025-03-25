@@ -31,7 +31,8 @@
     "vue-router": "^4.5.0",
     "vuex": "^4.0.2",
     "vxe-pc-ui": "^4.4.21",
-    "vxe-table": "^4.11.28"
+    "vxe-table": "^4.11.28",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",
@@ -41,6 +42,7 @@
     "sass-embedded": "^1.86.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.8",
+    "vite-plugin-clean-css": "^0.0.3",
     "vite-plugin-mock": "^3.0.2",
     "vite-plugin-pages": "^0.32.5",
     "vite-plugin-svg-icons": "^2.0.1",

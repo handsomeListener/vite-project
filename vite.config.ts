@@ -7,6 +7,7 @@ import { viteMockServe } from 'vite-plugin-mock';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import Pages from 'vite-plugin-pages';
+import cleanCSS from 'vite-plugin-clean-css';
 
 export default defineConfig(({ command }) => {
 	// const env = loadEnv(mode, process.cwd());
@@ -36,6 +37,14 @@ export default defineConfig(({ command }) => {
 						{ name: 'removeAttrs', params: { attrs: ['class', 'data-name'] } }
 					]
 				}
+			}),
+			cleanCSS({
+				level: {
+					2: {
+						mergeSemantically: true,
+						restructureRules: true,
+					},
+				},
 			})
 		],
 		esbuild: {
