@@ -383,6 +383,13 @@
   resolved "https://registry.yarnpkg.com/@antv/x6-plugin-transform/-/x6-plugin-transform-2.1.8.tgz#0a40cf63f1a0a882b08c800e37319973ba12e4c1"
   integrity sha512-GvJuiJ4BKp0H7+qx3R1I+Vzbw5gXp9+oByXo/WyVxE3urOC7LC5sqnaDfIjyYMN6ROLPYPZraLSeSyYBgMgcDw==
 
+"@antv/x6-vue-shape@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@antv/x6-vue-shape/-/x6-vue-shape-2.1.2.tgz#880abc2842f47f668c3de97cbacd1618bee1427a"
+  integrity sha512-lfLNJ2ztK8NP2JBAWTD6m5Wol0u6tOqj2KdOhWZoT8EtEw9rMmAdxsr8uTi9MRJO9pDMM0nbsR3cidnMh7VeDQ==
+  dependencies:
+    vue-demi latest
+
 "@antv/x6@^2.18.1":
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/@antv/x6/-/x6-2.18.1.tgz#4f3fab8c24119ca5f83583188657fc243cc5a0bc"
@@ -6177,7 +6184,7 @@ vt-pbf@^3.1.3:
     "@mapbox/vector-tile" "^1.3.1"
     pbf "^3.2.1"
 
-vue-demi@*, vue-demi@^0.14.10:
+vue-demi@*, vue-demi@^0.14.10, vue-demi@latest:
   version "0.14.10"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.10.tgz#afc78de3d6f9e11bf78c55e8510ee12814522f04"
   integrity sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==
