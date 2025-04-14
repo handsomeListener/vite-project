@@ -240,6 +240,24 @@
     ml-matrix "^6.10.4"
     tslib "^2.5.0"
 
+"@antv/layout@^1.2.14-beta.8":
+  version "1.2.14-beta.8"
+  resolved "https://registry.yarnpkg.com/@antv/layout/-/layout-1.2.14-beta.8.tgz#48d3a16d7148138931317c0aee634da2ab64f079"
+  integrity sha512-/zP8pRz28ahYSVk4fsfhl3T1X3FvCAi7Q3YQ8H2LZEvTojYYrJtO2AXFsojehU6HGVnIAq+QIjd3He6ot8+gvA==
+  dependencies:
+    "@antv/event-emitter" "^0.1.3"
+    "@antv/graphlib" "^2.0.0"
+    "@antv/util" "^3.3.2"
+    "@naoak/workerize-transferable" "^0.1.0"
+    comlink "^4.4.1"
+    d3-force "^3.0.0"
+    d3-force-3d "^3.0.5"
+    d3-octree "^1.0.2"
+    d3-quadtree "^3.0.1"
+    dagre "^0.8.5"
+    ml-matrix "^6.10.4"
+    tslib "^2.5.0"
+
 "@antv/scale@^0.4.16":
   version "0.4.16"
   resolved "https://registry.yarnpkg.com/@antv/scale/-/scale-0.4.16.tgz#60557470668ccfe5217e482a01f05c0cbb706b62"
